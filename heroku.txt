@@ -1,0 +1,39 @@
+- heroku login (Login with your account)
+- git init
+- git add .
+- git commit -m "new laravel project"
+8. Right click directory (project name) folder. Create new file (Name: Procfile)
+- Type "web: vendor/bin/heroku-php-apache2 public/"
+- Ctrl + S (Save) and Close
+9. TERMINAL:
+- git init
+- git add .
+- git commit -m "Procfile for Heroku"
+- heroku create
+
+HEROKU
+10. Go to heroku and login
+11. Open your application
+12. VSCODE TERMINAL:
+- php artisan key:generate --show (Copy key)
+- heroku config:set APP_KEY=(paste key)
+- git push heroku master
+- heroku open (Go back to TERMINAL after)
+- heroku config:add APP_ENV=production
+- heroku config:add APP_URL=(your app link)
+
+HEROKU
+13. Resources - Add-ons - Search for Heroku Postgres - Submit Order Form
+
+14. TERMINAL: 
+- heroku pg:credentials:url (Take note of the result)
+- heroku config: add DB_CONNECTION=pgsql
+- heroku config:add DB_HOST=(Check in the result)
+- heroku config:add DB_PORT=(Check in the result)
+- heroku config:add DB_DATABASE=(Check in the result)
+- heroku config:add DB_USERNAME=(Check in the result)
+- heroku config:add DB_PASSWORD=(Check in the result)
+- heroku run php artisan migrate:fresh
+
+HEROKU
+15. Resources - Heroku Portgres - Dataclips - Create dataclip - Type "select * from migrations" and "migrations" on dataclip title - Save and run

@@ -1,0 +1,7 @@
+ composer global require laravel/installer
+- composer create-project --prefer-dist laravel/laravel (project name)
+- composer require laravel/ui
+- php artisan ui bootstrap --auth
+- npm install
+- npm run dev
+- npm run dev

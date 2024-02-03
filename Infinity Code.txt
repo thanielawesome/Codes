@@ -1,0 +1,64 @@
+3. Open VS Code - File - Open Folder (htdocs)
+4. View - Terminal
+5. VS CODE TERMINAL:
+- composer global require laravel/installer"
+- composer create-project laravel/laravel (project name) "8.*"
+
+.env - DB_DATABASE, USERNAME, PASSWORD
+
+BROWSER
+6. Go to "localhost/phpmyadmin" and create database (name of database should match with the name of database from the .env)
+7. VS CODE TERMINAL:
+- cd (project name)
+- composer require laravel/ui
+- php artisan ui bootstrap --auth
+- npm install
+- npm run dev
+- npm run dev
+- php artisan migrate
+
+• TERMINAL (Check PHP Version): php -v (Disregard number 8 and proceed with number 9 kung Php 7 ang magpapakita after irun. Pero kung Php 8, perform number 8.)
+
+8. composer.json
+• Replace this code after "require":{
+- "php": "7.4.8"
+- Ctrl + S (Save)
+• Insert this code after "config": {
+- "platform": {
+"php": "7.4.8"
+},  
+- Ctrl + S (Save)
+• TERMINAL: 
+- composer install
+- composer update
+
+9. TERMINAL: php artisan serve
+10. LARAVEL PAGE (type localhost:8000 in the browser)
+- Register (Email: admin@admin.com. Password: password)
+
+INFINITYFREE
+11. Go to infinityfree - Client area - Register (Verify email)
+12. Create account. Set epizy.com as domain. 
+13. Set password and create account
+14. Click Control Panel and Click "I Approve"
+15. Open Online File Manager
+
+FILEZILLA
+16. Open FileZilla
+17. Click File - Site Manager - New (infinityfree)
+18. Copy Host, Port, User, and Password from infinityfree Control Panel/FTP and paste to Filezilla. And click Connect
+19. (Lower Right) Open htdocs and delete 2 files. Right click. Create directory (Name: laravel)
+20. (Upper Left) Locate location of laravel (C: - xampp - htdocs - (project name)
+21. (Lower Left) Open public folder. Select all. Right click and upload
+22. (Lower Right) Open laravel folder
+23. (Lower Left) Go back to directory. Select all except public folder. Right click. Upload 
+24. Wait until upload is finished 
+
+INFINITYFREE
+25. Go to Online File Manager
+26. htdocs - index.php - Edit. Replace all ".." with laravel. Save and close
+27. htdocs - laravel - bootstrap - cache (Delete config.php kung meron. Disregard kung wala)
+28. htdocs - laravel - .env - Edit (Update database Host name, Databae name, Username, Password. Get the information from Client Area/FTP). Save and close
+29. BROWSER: Go to localhost/phpmyadmin - find your database and export
+30. INFINITYFREE: Go back to Control Panel - phpmyadmin - click here - set name (should match from .env database name) - admin - import (upload the exported sql)
+31. Run using the website/domain (epizy.com)
